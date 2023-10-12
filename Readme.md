@@ -47,8 +47,15 @@ pip3 install jupyter
 
 ## 2. Fine-tune (Train)
 
-Start jupyter notebook (see below) and run [finetune-with-lora.ipynb](finetune-with-lora.ipynb).
+Run jupyter notebook.
 
 ```
 jupyter notebook
 ```
+
+Open jupyter notebook in browser, and run the following examples.
+
+| Example                                                              | Description                                       |
+| -------------------------------------------------------------------- | ------------------------------------------------- |
+| [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
+| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (125M) with LoRA |
