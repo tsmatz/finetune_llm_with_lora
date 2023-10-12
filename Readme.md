@@ -58,4 +58,4 @@ Open jupyter notebook in browser, and run the following examples.
 | Example                                                              | Description                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------- |
 | [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
-| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (125M) with LoRA |
+| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
