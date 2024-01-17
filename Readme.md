@@ -1,13 +1,21 @@
 # Fine-tuning LLM with LoRA (Low-Rank Adaptation)
 
-This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.09685) implementation with step-by-step explanation in notebook.<br>
+LoRA (Low-Rank Adaptation) is one of mostly used parameter-efficient fine-tuning (PEFT) methods today.
+
+This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.09685) implementation from scratch (manually) in a step-by-step manner (I don't use ```PEFT``` package), and also shows you clear ideas behind this implementation in IPython notebook.
+
+| Example                                                              | Description                                       |
+| -------------------------------------------------------------------- | ------------------------------------------------- |
+| [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
+| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
+
 This example is also made runnable in the mainstream computing with small footprint - such as, in a signle GPU of Tesla T4 or consumer GPU (NVIDIA RTX) - so that you can soon run and check results.
 
-> Note : For more large language models, please run training on multiple devices with large-scale model-parallel techniques. (See [here](https://tsmatz.wordpress.com/2023/09/21/model-parallelism/).)
+> Note : For more large models, please run training on multiple devices with large-scaled model-parallelism techniques. (See [here](https://tsmatz.wordpress.com/2023/09/21/model-parallelism/).)
 
-Today LoRA can be easily implemented with ```PEFT``` package, but this example implements LoRA from scratch (manually) in a step-by-step manner.
+To focus on LoRA implementation, here I use pre-trained model from Hugging Face, unlike [examples in official repository](https://github.com/microsoft/LoRA).
 
-To focus on LoRA implementation, here I download pre-trained model from Hugging Face, unlike [official example](https://github.com/microsoft/LoRA). (But I'll use PyTorch training loop.)
+> Note : In this repository, Hugging Face API is used only for downloading pre-trained models. I'll also use PyTorch training loop for fine-tuning. (I don't use Trainer class in Hugging Face API.)
 
 ## 1. Set-up and Install
 
@@ -47,15 +55,16 @@ pip3 install jupyter
 
 ## 2. Fine-tune (Train)
 
+Download this repository.
+
+```
+git clone https://github.com/tsmatz/finetune_llm_with_lora
+```
+
 Run jupyter notebook.
 
 ```
 jupyter notebook
 ```
 
-Open jupyter notebook in browser, and run the following examples.
-
-| Example                                                              | Description                                       |
-| -------------------------------------------------------------------- | ------------------------------------------------- |
-| [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
-| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
+Open jupyter notebook in browser, and run examples in this repository.
