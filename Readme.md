@@ -9,13 +9,13 @@ This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.0
 | [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
 | [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
 
-This example is also made runnable in the mainstream computing with small footprint - such as, in a signle GPU of Tesla T4 or consumer GPU (NVIDIA RTX) - so that you can soon run and check results.
+This example is also made runnable in the mainstream hardware with small footprint - such as, a signle GPU of Tesla T4, consumer GPUs (NVIDIA RTX), etc - so that you can soon run and check results.
 
 > Note : For more large models, please run training on multiple devices with large-scaled model-parallelism techniques. (See [here](https://tsmatz.wordpress.com/2023/09/21/model-parallelism/).)
 
 To focus on LoRA implementation, here I use pre-trained model from Hugging Face, unlike [examples in official repository](https://github.com/microsoft/LoRA).
 
-> Note : In this repository, Hugging Face API is used only for downloading pre-trained models. I'll also use PyTorch training loop for fine-tuning. (I don't use Trainer class in Hugging Face API.)
+> Note : In this repository, Hugging Face API is used only for downloading pre-trained models. I don't also use ```Trainer``` class in Hugging Face API and I'll then apply regular PyTorch training loop for fine-tuning.
 
 ## 1. Set-up and Install
 
