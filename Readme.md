@@ -6,10 +6,10 @@ This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.0
 
 This is also runnable in the mainstream hardware with small footprint - such as, a signle GPU of Tesla T4, consumer GPUs (NVIDIA RTX), etc - for you to try this code easily.
 
-| Example                                                              | Description                                       |
-| -------------------------------------------------------------------- | ------------------------------------------------- |
-| [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
-| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
+| Example                                                              | Description                                                             |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA<br>(Also, explaining LoRA method) |
+| [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA                       |
 
 Unlike examples in [official repository](https://github.com/microsoft/LoRA), here I download pre-trained models to focus on LoRA implementation.
 
