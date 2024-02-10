@@ -2,20 +2,18 @@
 
 LoRA (Low-Rank Adaptation) is one of mostly used parameter-efficient fine-tuning (PEFT) methods today.
 
-This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.09685) implementation from scratch (manually) in a step-by-step manner (I don't use ```PEFT``` package), and also shows you clear ideas behind this implementation in IPython notebook.
+This example shows you [LoRA (Low-Rank Adaptation)](https://arxiv.org/abs/2106.09685) implementation from scratch (manually) in a step-by-step manner (without ```PEFT``` package), and also shows you clear ideas behind this implementation in IPython notebook.
+
+This is also runnable in the mainstream hardware with small footprint - such as, a signle GPU of Tesla T4, consumer GPUs (NVIDIA RTX), etc - for you to try this code easily.
 
 | Example                                                              | Description                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------- |
 | [01-finetune-opt-with-lora.ipynb](01-finetune-opt-with-lora.ipynb)   | Fine-tuning Meta's OPT-125M with LoRA             |
 | [02-finetune-gpt2-with-lora.ipynb](02-finetune-gpt2-with-lora.ipynb) | Fine-tuning OpenAI's GPT-2 small (124M) with LoRA |
 
-This example is also made runnable in the mainstream hardware with small footprint - such as, a signle GPU of Tesla T4, consumer GPUs (NVIDIA RTX), etc - so that you can soon run and check results.
+Unlike examples in [official repository](https://github.com/microsoft/LoRA), here I download pre-trained models to focus on LoRA implementation.
 
-> Note : For more large models, please run training on multiple devices with large-scaled model-parallelism techniques. (See [here](https://tsmatz.wordpress.com/2023/09/21/model-parallelism/).)
-
-To focus on LoRA implementation, here I use pre-trained model from Hugging Face, unlike [examples in official repository](https://github.com/microsoft/LoRA).
-
-> Note : In this repository, Hugging Face API is used only for downloading pre-trained models. I don't also use ```Trainer``` class in Hugging Face API and I'll then apply regular PyTorch training loop for fine-tuning.
+> Note : In this repository, Hugging Face API is used to download pre-trained models and I then apply regular PyTorch training loop for fine-tuning. (I don't use blackboxed ```Trainer``` class in Hugging Face API.)
 
 ## 1. Set-up and Install
 
